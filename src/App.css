@@ -1,3 +1,13 @@
-body {
-  background-color: #4b4b4b;
+.table-row {
+  background-color: #39ff1f;
+  border: 1px solid rgb(53, 54, 2);
+  
+}
+
+.table-column {
+  color : rgb(236, 17, 17);
+}
+
+.rows {
+  color : rgb(73, 43, 155);
 }
