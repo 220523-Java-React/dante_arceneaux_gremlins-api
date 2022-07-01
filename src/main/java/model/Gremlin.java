@@ -1,17 +1,18 @@
 package model;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class gremlin {
+public class Gremlin implements Serializable {
     private String name;
     private Integer age;
     private String color;
     private Boolean isEvil;
 
-    public gremlin(){
+    public Gremlin(){
     }
 
-    public gremlin(String name, Integer age, String color, Boolean isEvil) {
+    public Gremlin(String name, Integer age, String color, Boolean isEvil) {
         this.name = name;
         this.age = age;
         this.color = color;
@@ -22,7 +23,7 @@ public class gremlin {
         return name;
     }
 
-    public gremlin setName(String name) {
+    public Gremlin setName(String name) {
         this.name = name;
         return this;
     }
@@ -31,7 +32,7 @@ public class gremlin {
         return age;
     }
 
-    public gremlin setAge(Integer age) {
+    public Gremlin setAge(Integer age) {
         this.age = age;
         return this;
     }
@@ -40,16 +41,16 @@ public class gremlin {
         return color;
     }
 
-    public gremlin setColor(String color) {
+    public Gremlin setColor(String color) {
         this.color = color;
         return this;
     }
 
-    public Boolean getEvil() {
+    public Boolean getIsEvil() {
         return isEvil;
     }
 
-    public gremlin setEvil(Boolean evil) {
+    public Gremlin setEvil(Boolean evil) {
         isEvil = evil;
         return this;
     }
@@ -67,8 +68,8 @@ public class gremlin {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof gremlin)) return false;
-        gremlin gremlin = (gremlin) o;
+        if (!(o instanceof Gremlin)) return false;
+        Gremlin gremlin = (Gremlin) o;
         return Objects.equals(name, gremlin.name) && Objects.equals(age, gremlin.age) && Objects.equals(color, gremlin.color) && Objects.equals(isEvil, gremlin.isEvil);
     }
 
