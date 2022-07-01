@@ -4,6 +4,8 @@ import java.io.Serializable;
 import java.util.Objects;
 
 public class Gremlin implements Serializable {
+
+    private int id;
     private String name;
     private Integer age;
     private String color;
@@ -12,7 +14,8 @@ public class Gremlin implements Serializable {
     public Gremlin(){
     }
 
-    public Gremlin(String name, Integer age, String color, Boolean isEvil) {
+    public Gremlin(int id, String name, Integer age, String color, Boolean isEvil) {
+        this.id = id;
         this.name = name;
         this.age = age;
         this.color = color;
@@ -55,10 +58,24 @@ public class Gremlin implements Serializable {
         return this;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public Gremlin setId(int id) {
+        this.id = id;
+        return this;
+    }
+
+    public Boolean getEvil() {
+        return isEvil;
+    }
+
     @Override
     public String toString() {
-        return "gremlin{" +
-                "name='" + name + '\'' +
+        return "Gremlin{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
                 ", age=" + age +
                 ", color='" + color + '\'' +
                 ", isEvil=" + isEvil +
@@ -70,11 +87,11 @@ public class Gremlin implements Serializable {
         if (this == o) return true;
         if (!(o instanceof Gremlin)) return false;
         Gremlin gremlin = (Gremlin) o;
-        return Objects.equals(name, gremlin.name) && Objects.equals(age, gremlin.age) && Objects.equals(color, gremlin.color) && Objects.equals(isEvil, gremlin.isEvil);
+        return id == gremlin.id && Objects.equals(name, gremlin.name) && Objects.equals(age, gremlin.age) && Objects.equals(color, gremlin.color) && Objects.equals(isEvil, gremlin.isEvil);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, age, color, isEvil);
+        return Objects.hash(id, name, age, color, isEvil);
     }
 }
