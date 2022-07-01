@@ -14,4 +14,8 @@ public class GremlinService {
    public List<Gremlin> getAllGremlins() {
        return gremlinRepository.getAllGremlins();
     }
+
+    public Gremlin createGremlin(Gremlin gremlin) {
+        return gremlinRepository.create(gremlin);
+    }
 }
