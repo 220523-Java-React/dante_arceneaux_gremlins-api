@@ -47,7 +47,7 @@ public class GremlinRepository implements DAO<Gremlin> {
                 gremlin.setName(rs.getString("name"));
                 gremlin.setAge(rs.getInt("age"));
                 gremlin.setColor(rs.getString("color"));
-                gremlin.setEvil(rs.getBoolean("evil"));
+                gremlin.setEvil(rs.getBoolean("is_Evil"));
                 gremlins.add(gremlin);
             }
 
